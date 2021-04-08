@@ -8,6 +8,7 @@
 
 html, body {
     height: 100%;
+    overflow: hidden;
 }
 
 nav {
@@ -291,4 +292,5 @@ a.login:hover span {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
