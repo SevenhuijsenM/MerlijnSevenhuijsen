@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    /* Center and scale the image nicely */
+    background-image: url("aurora.jpg");
+    background-color: #cccccc;
+    width: 100%;
+    height: 960px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
