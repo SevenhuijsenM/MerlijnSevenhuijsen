@@ -19,7 +19,7 @@ nav {
     color: #e2e2e2;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 13px;
+    font-size: 10px;
     cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ nav {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .logo:hover,
@@ -132,18 +132,21 @@ nav {
 
 }
 
+#li-login {
+    width: 100px;
+    height: 20px;
+}
 #li-login a {
     position: absolute;
     text-align: center;
     width: 100px;
     height: 30px;
-    margin-top: -5px;
     line-height: 30px;
     background:#0c0c0c;
     letter-spacing: 4px;
     text-decoration: none;
     border-radius: 50px;
-
+    margin-top: -5px;
 }
 
 #li-login span {
@@ -160,6 +163,7 @@ nav {
     transition: 0.5s;
     z-index: 1;
     border-radius: 50px;
+    
 }
 
 #li-login a::before {
