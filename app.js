@@ -1,5 +1,6 @@
 const navSlide = () => {
     // Get the burger ( three stripes ) and the navigator of the html
+    const indicatorBar = document.querySelector('.page-bar');
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
@@ -7,6 +8,7 @@ const navSlide = () => {
     // Add a click listener that will toggle the nav-active class
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
+        indicatorBar.classList.toggle('nav-active');
 
         // Animate all links
         navLinks.forEach((link, index) => {
