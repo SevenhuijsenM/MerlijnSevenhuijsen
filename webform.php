@@ -1,3 +1,28 @@
+<?php
+echo"<pre>";
+    print_r($_POST);
+echo"</pre>";
+    $message_sent = false;
+    if ((isset($_POST['email']) && $_POST['email'] != '') && (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)))  {
+        // Submit the form
+        $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $message = $_POST['message'];
+    
+        $to = "contact@merlijnsevenhuijsen.com"
+        $body ="";
+        
+        $body.= "From: ".userName. "\r\n";
+        $body.= "Email: ".userEmail. "\r\n";
+        $body.= "Message: ".message. "\r\n";
+    
+        mail($to, "New contact form", $body)
+
+        $message_sent = true;
+    } else {
+        $invalid_class_name = "form-invalid";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,6 +34,13 @@
         <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
     </head>
     <body>
+        <?php 
+        if ($message_sent):
+        ?> 
+            <h3> Thanks, I will be in touch.</h3>
+        <?php
+        else:
+        ?>
         <nav class="navigation-bar full-screen-fixed flex-around">
             <div class="logo">
                 <a href="index.html">Merlijn Sevenhuijsen</a>
@@ -54,7 +86,7 @@
                                     <input name="name" type="text" class="glass-box" placeholder="Full Name">
                                 </div>
                                 <div class="inputBx">
-                                    <input name="email" type="email" class="glass-box" placeholder="Email">
+                                    <input name="email" type="email" class="glass-box <?= $invalid_class_name ?? "" ?>" placeholder="Email">
                                 </div>
                                 <div class="inputBx">
                                     <textarea name="message" class="glass-box" placeholder="Type Message Here..."></textarea>
@@ -81,4 +113,7 @@
         <script src="app.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     </body>
+    <?php
+    endif;
+    ?>
 </html>
