@@ -8,38 +8,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
     </head>
-    
     <body>
-        <div id="container-projects">
-            <nav>
-                <div class="logo">
-                    <a href="index.html">Merlijn Sevenhuijsen</a>
+        <nav class="navigation-bar full-screen-fixed flex-around">
+            <div class="logo">
+                <a href="index.html">Merlijn Sevenhuijsen</a>
+            </div>
+            <ul class="nav-links flex-around">
+                <li class="flex-around">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="flex-around">
+                    <a href="about.html">About me</a>
+                </li>
+                <li class="color-projects flex-around">
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li class="flex-around">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="flex-around" id="li-login">
+                    <a href="#"><span>Log In</span></a> 
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="page-bar color-projects"></div>
+        <div class="container" id="container-projects">
+            <div class="background-image" id="background-image-projects"></div>
+            <div class="projects">
+                <div class="box-projects">
+                    <span class="hovering-span"></span>
+                    <div class="content-card glass-box">
+                        <h2> Viseye </h2>
+                        <p>  An interactive tool to visualize eye-tracking data. Made by a group of  6 students within 8 weeks.</p>
+                        <img alt="Viseye figure" srcset="background_images/viseye-figure.png">
+                        <a href="https://viseye.web.app">Go to project</a>
+                    </div>
                 </div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li id="navigation-projects">
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li id="li-login">
-                        <a href="#"><span>Log In</span></a> 
-                    </li>
-                </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                <div class="box-projects">
+                    <span class="hovering-span"></span>
+                    <div class="content-card glass-box">
+                        <h2> Rocket game </h2>
+                        <p>  A game resolved around flying a rocket to the end destination. This project was done to learn more about creating games as well as applying the gained programming knowledge</p>
+                        <a href="#">Read more</a>
+                    </div>
                 </div>
-            </nav>
-            <div class="page-bar" id="page-bar-projects"></div>
+                <div class="box-projects">
+                    <span class="hovering-span"></span>
+                    <div class="content-card glass-box">
+                        <h2> Website </h2>
+                        <p>  Create a website with limited experience, include multiple different pages with different effects. Get to know more about the prcoess of creating websites from scratch. The website you are currently looking at is the final result.</p>
+                    </div>
+                </div>
+            </div>
             <script src="app.js"></script>
-        </div>        
+        </div>
+        <footer class="bottom-bar full-screen-fixed flex-around">
+            <p id="copyright">&#169; 2021 Merlijn Sevenhuijsen</p>
+            <ul class="social-media flex-around">
+                <li><a class="flex-around" href="https://www.facebook.com/merlijn.sevenhuijsen/"><img src="background_images/facebook.png" alt="Facebook link"></a></li>
+                <li><a class="flex-around" href="https://twitter.com/merlijndussen/"><img src="background_images/twitter.svg" alt="Twitter link"></a></li>
+                <li><a class="flex-around" href="https://www.instagram.com/merlijndussen/"><img src="background_images/instagram.png" alt="Instagram link"></a></li>
+                <li><a class="flex-around" id="gitH" href="https://github.com/SevenhuijsenM"><img src="background_images/github.png" alt="Github link"></a></li>
+            </ul>
+        </footer>
     </body>
 </html>

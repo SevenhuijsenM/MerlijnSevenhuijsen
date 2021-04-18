@@ -8,38 +8,184 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
     </head>
-    
     <body>
-        <div id="container-about">
-            <nav>
-                <div class="logo">
-                    <a href="index.html">Merlijn Sevenhuijsen</a>
+        <nav class="navigation-bar full-screen-fixed flex-around">
+            <div class="logo">
+                <a href="index.html">Merlijn Sevenhuijsen</a>
+            </div>
+            <ul class="nav-links flex-around">
+                <li class="flex-around">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="flex-around color-about">
+                    <a href="about.html">About me</a>
+                </li>
+                <li class="flex-around">
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li class="flex-around">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="flex-around" id="li-login">
+                    <a href="#"><span>Log In</span></a> 
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="page-bar color-about"></div>
+        <div class="container" id="container-about">
+            <div class="background-image" id="background-image-about"></div>
+            <div class="content-about flex-around">
+                <div class="contentbox glass-box">
+                    <h2>Hello,</h2>
+                    <h2>I'm Merlijn Sevenhuijsen</h2>
+                    <p> a 20 year old person who has interest in a broad variety of different subjects. There's too little time and too many interesting things to do in a day. I live in a small village called <span id="city">dussen</span> in The Netherlands. My hobbies mostly revolve around computers, such as playing videogames as well as watching online content. In my spare time I like to listen too music as well, generally a broad range of different music genres. Working towards an end goal is always a nice experience, and there is nothing better than finishing a project with a good end result.</p>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Download CV</a>
                 </div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li id="navigation-about">
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li id="li-login">
-                        <a href="#"><span>Log In</span></a> 
-                    </li>
-                </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+            </div>
+            <section class="content-about-programming flex-around">
+                <div class="programming-container flex-around">
+                    <div class="programming-card">
+                        <div class="box-about flex-around glass-box">
+                            <span class="hovering-span"></span>
+                            <div>
+                                <div class="percent-about">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>70<span>%</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Html</div>
+                    </div>
+                    <div class="programming-card">
+                        <div class="box-about flex-around glass-box">
+                            <span class="hovering-span"></span>
+                            <div>
+                                <div class="percent-about">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>70<span>%</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Css</div>
+                    </div>
+                    <div class="programming-card">
+                        <div class="box-about flex-around glass-box">
+                            <span class="hovering-span"></span>
+                            <div>
+                                <div class="percent-about">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>60<span>%</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Javascript</div>
+                    </div>
+                    <div class="programming-card">
+                        <div class="box-about flex-around glass-box">
+                            <span class="hovering-span"></span>
+                            <div>
+                                <div class="percent-about">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>90<span>%</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Java</div>
+                    </div>
+                    <div class="programming-card">
+                        <div class="box-about flex-around glass-box">
+                            <span class="hovering-span"></span>
+                            <div>
+                                <div class="percent-about">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>90<span>%</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Python</div>
+                    </div>
+                    <div class="programming-card">
+                        <div class="box-about flex-around glass-box">
+                            <span class="hovering-span"></span>
+                            <div>
+                                <div class="percent-about">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>60<span>%</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">C#</div>
+                    </div>
                 </div>
-            </nav>
-            <div class="page-bar" id="page-bar-about"></div>
+            </section>
+            <div class="experiences">
+                <div class="experiences-box">
+                    <h1 class="experience-content glass-box" id="experience-title">
+                        Past Experiences
+                        <span></span>
+                    </h1>
+                </div>
+                <div class="experiences-box">
+                    <div class="experience-content glass-box">
+                        <span></span>
+                        <h2> 2012 - 2019: High School </h2>
+                        <p>I finished VWO on Dongemond College in Raamsdonksveer, The netherlands.</p>
+                        <div class="experience-background"></div>
+                    </div>
+                </div>
+                <div class="experiences-box">
+                    <div class="experience-content glass-box">
+                        <span></span>
+                        <h2> 2019 - present: University </h2>
+                        <p>I am currently studying Computer Science and Engineering at the TU in Eindhoven.</p>
+                    </div>
+                </div>
+            </div>
             <script src="app.js"></script>
         </div>
+        <footer class="bottom-bar full-screen-fixed flex-around">
+            <p id="copyright">&#169; 2021 Merlijn Sevenhuijsen</p>
+            <ul class="social-media flex-around">
+                <li><a class="flex-around" href="https://www.facebook.com/merlijn.sevenhuijsen/"><img src="background_images/facebook.png" alt="Facebook link"></a></li>
+                <li><a class="flex-around" href="https://twitter.com/merlijndussen/"><img src="background_images/twitter.svg" alt="Twitter link"></a></li>
+                <li><a class="flex-around" href="https://www.instagram.com/merlijndussen/"><img src="background_images/instagram.png" alt="Instagram link"></a></li>
+                <li><a class="flex-around" id="gitH" href="https://github.com/SevenhuijsenM"><img src="background_images/github.png" alt="Github link"></a></li>
+            </ul>
+        </footer>
     </body>
 </html>
