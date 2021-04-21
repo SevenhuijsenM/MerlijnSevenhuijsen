@@ -828,21 +828,34 @@ svg circle:nth-child(2) {
 }
 
 .form-container .inputBx input[type="submit"] {
-    position: relative;
-    left: 20%;
-    background:  var(--text-color);
     color: var(--contact-color);
-    max-width: 60%;
-    align-self: center;
-    cursor: pointer;
-    font-weight: 600;
-    transition: .5s ease-in-out;
+    background: rgb(255, 255, 255);
 }
 
 .form-container .inputBx input[type="submit"]:hover {
-    background: rgba(255,255,255,0.2);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--text-color);
     font-weight: 600;
+}
+
+.contact-form-container {
+    position: relative;
+    margin-top: 20px;
+    align-self: center;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+    color: var(--text-color);
+}
+
+.declined {
+    background: rgba(255, 52, 52, 0.4);
+}
+
+.accepted {
+    background: rgba(73, 255, 18, 0.7);
 }
 
 /* Projects page */

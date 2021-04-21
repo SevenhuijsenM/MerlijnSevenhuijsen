@@ -1,5 +1,6 @@
 <?php
-  
+
+$form_used = false;
 if($_POST) {
     $name = "";
     $email = "";
@@ -31,7 +32,7 @@ if($_POST) {
     }
       
     if (isset($_POST['message'])) {
-        $visitor_message = htmlspecialchars($_POST['message']);
+        $message = htmlspecialchars($_POST['message']);
         $email_body .= "<div>
                            <label><b>Visitor Message:</b></label>
                            <div>".$message."</div>
@@ -45,11 +46,14 @@ if($_POST) {
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $email . "\r\n";
-        
+     
+    $form_used = true;
     if (mail($email_recipient, $title, $email_body, $headers)) {
         echo "<p>Thank you for contacting us, $name. You will get a reply within 24 hours.</p>";
+        $successfully_sent = true;
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
+        $successfully_sent = false;
     }
       
 } else {
@@ -83,7 +87,7 @@ if($_POST) {
                     <a href="projects.html">Projects</a>
                 </li>
                 <li class="color-contact flex-around">
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </li class="flex-around">
                 <li class="flex-around" id="li-login">
                     <a href="#"><span>Log In</span></a> 
@@ -121,9 +125,18 @@ if($_POST) {
                                 <div class="inputBx">
                                     <textarea name="message" class="glass-box" placeholder="Type Message Here..."></textarea>
                                 </div>
-                                <div class="inputBx">
+                                <div class="glass-box inputBx">
                                     <input type="submit" value="Send">
                                 </div>
+                                <?php 
+                                    if ( $form_used && $successfully_sent ) {
+                                        echo '<div class="glass-box accepted contact-form-container">
+                                        <p>The form has been sent successfully!</p></div>';
+                                    } else if ($form_used && !$successfully_sent ) {
+                                        echo '<div class="glass-box accepted contact-form-container">
+                                        <p>The form has not been sent!</p></div>';
+                                    }
+                                ?>
                             </form>
                         </div>
                     </div>
