@@ -54,10 +54,7 @@ if($_POST) {
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
         $successfully_sent = false;
-    }
-      
-} else {
-    echo '<p>Something went wrong</p>';
+    }     
 }
 ?>
 
@@ -112,7 +109,7 @@ if($_POST) {
                     <div class="form-container glass-box">
                         <div class="form">
                             <h2>Contact Me</h2>
-                            <form action="webform.php" id="contact-form" method="POST">
+                            <form action="contact.php" id="contact-form" method="POST">
                                 <div class="inputBx">
                                     <input name="name" type="text" class="glass-box" placeholder="Full Name">
                                 </div>
