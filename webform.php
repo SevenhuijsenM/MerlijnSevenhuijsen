@@ -45,12 +45,7 @@ if($_POST) {
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $email . "\r\n";
-          
-    echo"<p>$email_recipient</p>";
-    echo"<p>$title</p>";
-    echo"<p>$email_body</p>";
-    echo"<p>$headers</p>";
-    
+        
     if (mail($email_recipient, $title, $email_body, $headers)) {
         echo "<p>Thank you for contacting us, $name. You will get a reply within 24 hours.</p>";
     } else {
