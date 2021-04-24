@@ -9,6 +9,7 @@
 
 :root {
     --navigation-color:#202020;
+    --navigation-color-transparent: rgba(15, 14, 14, 0.7);
     --navigation-color-secondary: #e07f7f;
     --text-color: #e2e2e2;
     --contact-color: #e26f2e;
@@ -34,10 +35,6 @@ html, body {
     color: var(--text-color);
 }
 
-.navigation-bar {
-    top: 0;
-}
-
 .flex-around {
     display: flex;
     justify-content: space-around;
@@ -48,13 +45,17 @@ html, body {
     padding: 20px 40px;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border: 1px solid rgb(255,255,255,0.1);
+    border-radius: 20px;
     backdrop-filter: blur(15px);
 }
 
-nav {
-    height: 5vh;
-    background-color: var(--navigation-color);
+.navigation-bar {
+    background-color: var(--navigation-color-transparent);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 5%;
+    top: 0;
 }
 
 .logo a {
@@ -114,7 +115,7 @@ nav {
 
 .page-bar {
     position: fixed;
-    top: 5vh;
+    top: 5%;
     width: 100%;
     height: 1vh;
     z-index: 50;
@@ -122,11 +123,36 @@ nav {
 
 .background-image {
     width: 100%;
-    min-height: 90vh;
+    height: 100%;
     position: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     z-index: 0;
+}
+
+.content-page  {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    width: 90%;
+    color:var(--text-color);
+    padding: 5vh;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.glass-box-container {
+    position: fixed;
+    height: 93%;
+    width: 90%;
+    margin: 5%;
+    margin-top: 2%;
+    padding: 0;
+}
+
+.radius-top {
+    border-top: 1px solid rgb(255,255,255,0.1);
 }
 
 @media screen and (max-width: 768px) {
@@ -255,18 +281,22 @@ a.login:hover span,
     /* Full height and width */
     width: 100%;
 
-    margin-top: 5vh;
-
-    height: fit-content;
+    height: calc(90% - 1vh);
 
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align:justify;
 }
 
 .bottom-bar {
-    height: 6vh;
-    background-color: var(--navigation-color);
+    height: 6%;
+    background-color: var(--navigation-color-transparent);
     justify-content: center;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     bottom: 0;
 }
 
@@ -335,15 +365,6 @@ a.login:hover span,
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("background_images/sunrise.jpg");
 }
 
-.content-about  {
-    width: 100%;
-    color:var(--text-color);
-    padding: 5vh;
-    position: relative;
-    z-index: 2;
-    transition: 0.5s;
-}
-
 .content-about .contentbox {
     width: 60%;
     height: fit-content;
@@ -381,8 +402,9 @@ a.login:hover span,
     background: linear-gradient(315deg, rgba(0, 255, 174, 0.2), rgba(68, 0, 255, 0.2));
     width: 58%;
     left: 21%;
-    top: 7%;
-    height: 86%;
+    top: 4%;
+    height: 92%;
+    border-radius: 20px;
 }
 .content-about .contentbox h2 {
     font-weight: 700;
@@ -398,32 +420,27 @@ a.login:hover span,
     text-align: left;
 }
 
-.city {
+#city {
     color: orangered;
     font-weight: 800;
 }
 
 .content-about .contentbox a {
     display: inline-block;
-    background: var(--text-color);
+    background: var(--about-color);
+    width: 80%;
     padding: 10px 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 20px;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 40vh;
     transition: 0.5s;
-    background: #de56f6;
     letter-spacing: 2px;
-    margin: 20px;
+    color: var(--text-color);
 }
 
-.content-about .contentbox a:hover {
-    letter-spacing: 5px;
-    background: #d900ff;
+.contentbox a:hover {
     color: rgba(240, 128, 128, 1);
-    font-size: 125%;
 }
 
 .content-about-programming {
@@ -695,22 +712,38 @@ svg circle:nth-child(2) {
     background-color: var(--main-color);
 }
 
+.index-box {
+    margin: 5%;
+    margin-bottom: 6%;
+    height: 100px;
+    width: 90%;
+}
+
+.index-box .index-box-content {
+    width: 70%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header-index {
+    width: 15%;
+}
+
+.box-divider {
+    height: 100%;
+    width: 1%;
+    background-color: #00ff9d;
+}
+
 #background-image-index {
     /* The image used */
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("background_images/nature.jpg");
 }
 
-.h2h2 {
-    position: absolute;
-    width: 40%;
-    height: 40%;
-    top: 30%;
-    left: 30%;
-    color: var(--text-color);
-    font-size: 46px;
-    text-align: center;
+.content-index {
+    margin-top: 20px;
 }
-
 /* Contact page */
 
 .color-contact {
@@ -728,7 +761,7 @@ svg circle:nth-child(2) {
     justify-content: center;
 }
 
-.section-box {
+.containerbox {
     width: 40%;
     height: 50%;
 }
