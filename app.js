@@ -8,7 +8,7 @@ const navSlide = () => {
     // Add a click listener that will toggle the nav-active class
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
-        indicatorBar.classList.toggle('nav-active');
+        indicatorBar.classList.toggle('nav-active-bar');
 
         // Animate all links
         navLinks.forEach((link, index) => {
