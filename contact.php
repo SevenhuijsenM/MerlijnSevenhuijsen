@@ -160,7 +160,30 @@ if($_POST) {
                 </ul>
             </footer>
         </div>
-        <script src="checkEmail.js"></script>
+        <div class="login-background">
+            <div class="login-container">
+                <h2 class="sign-in-text">Sign in</h2>
+                <div class="alternate-login-options">
+                    <a href="#" class="btn-alternate-login m-b-20">
+                        <img src="background_images/icon-facebook.png" alt="FACEBOOK">
+                        Facebook
+                    </a>
+                    <a href="#" class="btn-alternate-login m-b-20">
+                        <img src="background_images/icon-google.png" alt="GOOGLE">
+                        Google
+                    </a>
+                </div>
+                <form class="login-form" action="index.html" method="post">
+                    <h1>E-mail</h1>
+                    <input type="email" name="login-email" placeholder="Email Address">
+                    <h1>Password</h1>
+                    <input type="password" name="login-password" placeholder="Password">
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+                </form>
+                <a href="#" class="create-account">Not a member? Create your account here.</a>
+            </div>
+        </div>
+        <script src="jquery-3.6.0.min.js"></script>
         <script src="app.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     </body>

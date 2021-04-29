@@ -1,3 +1,16 @@
+// The first function that will be called upon starting the page
+const initialize = () => {
+    // Initially hide the login screen
+    $(".login-background").hide();
+
+    // Set the navigation slider
+    navSlide();
+
+    // Set up the login form
+    loginForm();
+}
+
+
 const navSlide = () => {
     // Get the burger ( three stripes ) and the navigator of the html
     const indicatorBar = document.querySelector('.page-bar');
@@ -18,6 +31,24 @@ const navSlide = () => {
         // Burger animation
         burger.classList.toggle('burgerToggle');
     });
+}
+
+const loginForm = () => {
+    // Add an on click listener to the background of the login page to return
+    $('.login-background').on('click', function(e) {
+        const container = $(".login-container");
+        // Only hide the login page if it is already shown and clicked outside of the page
+        if (container.is(":visible") && !$(e.target).closest(container).length) {
+            $('.login-background').hide();
+        }
+    });
+
+    // Add an on click listener to the login button
+    $('#li-login').on('click', function(e) {
+        // Show the login page
+        $(".login-background").show();
+    })
+
 
 }
 
@@ -31,7 +62,7 @@ function getBarAnimation(navLinks, link, index) {
     } else {
         link.style.animation = `navLinkFade 0.5s ease forwards ${(navLinks.length - index) / 7}s`
     }
-  }
-  
-  
-navSlide();
+}
+
+
+initialize();
