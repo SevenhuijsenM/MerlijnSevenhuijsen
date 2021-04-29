@@ -81,9 +81,7 @@ if($_POST) {
         <div class="background-image" id="background-image-contact"></div>
         <div class="glass-box-container glass-box">
         <nav class="glass-box navigation-bar flex-around">
-                <div class="logo">
-                    <a href="index.html">Merlijn Sevenhuijsen</a>
-                </div>
+                <a class="logo" href="index.html">Merlijn Sevenhuijsen</a>
                 <ul class="nav-links flex-around">
                     <li class="flex-around">
                         <a href="index.html">Home</a>
@@ -97,8 +95,8 @@ if($_POST) {
                     <li class="color-contact flex-around radius-top ">
                         <a href="contact.php">Contact</a>
                     </li class="flex-around">
-                    <li class="flex-around" id="li-login">
-                        <a href="#"><span>Log In</span></a> 
+                    <li class="flex-around li-login">
+                        <a href="#"><span class="flex-around" >Log In</span></a> 
                     </li>
                 </ul>
                 <div class="burger">
